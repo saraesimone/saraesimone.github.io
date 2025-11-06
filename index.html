@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrimonio di Sara & Simone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('./saraesimone.JPG')center top / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .countdown {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      background: #f7c6c7;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #e9a3a5;
+    }
+
+    /* --- ONDA INFERIORE --- */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave svg {
+      position: relative;
+      display: block;
+      width: calc(133% + 1.3px);
+      height: 150px;
+    }
+
+    .wave path {
+      fill: #fff;
+    }
+
+    /* --- INFO SECTION --- */
+    .info {
+      background-color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #e9a3a5;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .countdown {
+        font-size: 1.2rem;
+      }
+      .cta-btn {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Sara & Simone</h1>
+      <div class="countdown" id="countdown">00g 00h 00m 00s</div>
+      <button class="cta-btn" onclick="window.open('https://forms.gle/tuoGoogleForm', '_blank')">
+        Conferma la tua presenza 💌
+      </button>
+    </div>
+
+    <div class="wave">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path d="M0.00,49.98 C150.00,150.00 349.45,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>Il Grande Giorno</h2>
+    <p><strong>📅 Data:</strong> 31 Maggio 2026</p>
+    <p><strong>📍 Luogo:</strong> Chiesa di Falz&egrave; di trevignano</p>
+    <p><strong>🕓 Ora della cerimonia:</strong> 11:00</p>
+    <p><strong>🍽️ Ricevimento:</strong> Ristorante Barbesin</p>
+  </section>
+
+  <script>
+    // Countdown
+    const weddingDate = new Date("May 21, 2026 11:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "Oggi è il grande giorno!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days}g ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
