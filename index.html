@@ -23,7 +23,7 @@
       position: relative;
       width: 100%;
       height: 100vh;
-      background: url('./saraesimone.JPG')center top / cover no-repeat;
+      background: url('./saraesimone.jpeg')center top / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,7 +55,7 @@
     }
 
     .cta-btn {
-      background: #f7c6c7;
+      background: #550000;
       color: #fff;
       border: none;
       padding: 0.8rem 1.5rem;
@@ -127,7 +127,7 @@
     <div class="hero-content">
       <h1>Sara & Simone</h1>
       <div class="countdown" id="countdown">00g 00h 00m 00s</div>
-      <button class="cta-btn" onclick="window.open('https://forms.gle/tuoGoogleForm', '_blank')">
+      <button class="cta-btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdafv1grxtOm-7ocXUOe55IQH6o2_jqxoNslL9O-7uiDRItvw/viewform?usp=dialog', '_blank')">
         Conferma la tua presenza 💌
       </button>
     </div>
@@ -140,16 +140,21 @@
   </section>
 
   <section class="info">
-    <h2>Il Grande Giorno</h2>
+    <h2>Giorno dell'Evento</h2>
     <p><strong>📅 Data:</strong> 31 Maggio 2026</p>
     <p><strong>📍 Luogo:</strong> Chiesa di Falz&egrave; di trevignano</p>
     <p><strong>🕓 Ora della cerimonia:</strong> 11:00</p>
     <p><strong>🍽️ Ricevimento:</strong> Ristorante Barbesin</p>
   </section>
 
+  <section class="info">
+    <h2>B&B</h2>
+    <p><strong>Coming soon...</p>
+  </section>
+
   <script>
     // Countdown
-    const weddingDate = new Date("May 21, 2026 11:00:00").getTime();
+    const weddingDate = new Date("May 31, 2026 11:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
