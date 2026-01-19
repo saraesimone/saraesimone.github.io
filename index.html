@@ -118,6 +118,74 @@
         font-size: 1rem;
       }
     }
+
+    /* --- B&B SECTION --- */
+    .bnb-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .bnb-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bnb-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .bnb-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .bnb-content {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .bnb-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #550000;
+    }
+
+    .bnb-address {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    .bnb-link {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      background: #e9a3a5;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .bnb-link:hover {
+      background: #550000;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      .bnb-card img {
+        height: 180px;
+      }
+    }
+
   </style>
 </head>
 
@@ -147,10 +215,81 @@
     <p><strong>🍽️ Ricevimento:</strong> Ristorante Barbesin</p>
   </section>
 
+
   <section class="info">
-    <h2>B&B</h2>
-    <p><strong>Coming soon...</p>
-  </section>
+  <h2>B&B</h2>
+
+  <div class="bnb-list">
+
+    <div class="bnb-card">
+      <img src="./bb/pellizzari.avif" alt="B&B Pellizzari 1">
+      <div class="bnb-content">
+        <h3>B&B Pellizzari 1</h3>
+        <p class="bnb-address">📍 Piazza Guglielmo Marconi, Falz&egrave; di Trevignano</p>
+        <a href="https://www.airbnb.it/rooms/1255836754015287409?adults=2&check_in=2026-05-30&check_out=2026-06-01&guests=2&location=Falz%C3%A8%2C%20TV&search_mode=regular_search&source_impression_id=p3_1765487291_P3SxG_3Bt0fSOzHB&previous_page_section_name=1001" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+    <div class="bnb-card">
+      <img src="./bb/pellizzari2.avif" alt="B&B Pellizzari 2">
+      <div class="bnb-content">
+        <h3>B&B Pellizzari 2</h3>
+        <p class="bnb-address">📍 Piazza Guglielmo Marconi, Falz&egrave; di Trevignano</p>
+        <a href="https://www.airbnb.it/rooms/3723551?adults=2&check_in=2026-05-30&check_out=2026-06-01&guests=2&search_mode=regular_search&source_impression_id=p3_1765487333_P3UPgu-6FiTtxKQK&previous_page_section_name=1000&federated_search_id=c5857cba-483a-468f-9b76-bd664aa89fb5" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+    <div class="bnb-card">
+      <img src="./bb/nadia.jpeg" alt="B&B Nadia">
+      <div class="bnb-content">
+        <h3>B&B Nadia</h3>
+        <p class="bnb-address">📍 Via Cornarotta (Alta), Falz&egrave; di Trevignano</p>
+        <a href="https://www.airbnb.it/rooms/621525292331136990?adults=2&check_in=2026-05-30&check_out=2026-06-01&search_mode=regular_search&source_impression_id=p3_1765486346_P3y5w91_loGcRRyS&previous_page_section_name=1000&federated_search_id=b539867c-0765-4a49-95f5-dfad1cd444f9" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+    <div class="bnb-card">
+      <img src="./bb/duetorri.jpg" alt="Agriturismo 2 Torri">
+      <div class="bnb-content">
+        <h3>Agriturismo 2 Torri</h3>
+        <p class="bnb-address">📍 Via Cornarotta (Alta), Falz&egrave; di Trevignano</p>
+        <a href="https://www.agriturismoduetorri.com/" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+    <div class="bnb-card">
+      <img src="./bb/ca-artisti.jpg" alt="Ca artisti">
+      <div class="bnb-content">
+        <h3>Ca' degli Artisti</h3>
+        <p class="bnb-address">📍 Via Garibaldi, Trevignano</p>
+        <a href="https://www.cadegliartisti.it/" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+    <div class="bnb-card">
+      <img src="./bb/villaserena.jpg" alt="Villa Serena">
+      <div class="bnb-content">
+        <h3>Villa Serena</h3>
+        <p class="bnb-address">📍 Via Cal di Mezzo, Montebelluna</p>
+        <a href="https://www.booking.com/hotel/it/villa-serena-agriturismo.it.html" target="_blank" class="bnb-link">
+          Prenota
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
 
   <script>
     // Countdown
